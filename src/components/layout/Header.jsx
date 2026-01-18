@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,22 +10,35 @@ const Header = () => {
         <h1 className="text-xl font-serif font-black italic tracking-wide text-black">
           Amparo Art.
         </h1>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8 items-center font-sans uppercase text-sm">
-          <ul className="flex gap-8">
-            <li className="text-black font-light cursor-pointer hover:underline">HOME</li>
-            <li className="text-black font-light cursor-pointer hover:underline">ABOUT ME</li>
-            <li className="text-black font-light cursor-pointer hover:underline">WORK DONE</li>
-            <li className="text-black font-light cursor-pointer hover:underline">PROCESS</li>
+          <ul className="flex gap-8 text-black font-light">
+            <li>
+              <Link to="/" className="cursor-pointer hover:underline">
+                HOME
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="cursor-pointer hover:underline">
+                ABOUT ME
+              </Link>
+            </li>
+            <li>
+              <Link to="/portfolio" className="cursor-pointer hover:underline">
+                WORK DONE
+              </Link>
+            </li>
           </ul>
-          <button className="cursor-pointer text-primary font-light text-sm border border-primary rounded-3xl px-4 py-2 hover:bg-primary hover:text-white transition-all ease-in-out duration-300 hover:shadow">
-            PLACE ORDER
-          </button>
+          <Link to="/order">
+            <button className="cursor-pointer text-primary font-light text-sm border border-primary rounded-3xl px-4 py-2 hover:bg-primary hover:text-white transition-all ease-in-out duration-300 hover:shadow">
+              PLACE ORDER
+            </button>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden cursor-pointer text-primary z-50"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -35,34 +49,47 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div 
+      <div
         className={`md:hidden fixed inset-0 bg-accent z-40 flex flex-col justify-center items-center gap-8 transition-all duration-300 ease-in-out ${
-          isMenuOpen ? "opacity-100 visible bg-white" : "opacity-0 invisible pointer-events-none bg-transparent"
+          isMenuOpen
+            ? "opacity-100 visible bg-white"
+            : "opacity-0 invisible pointer-events-none bg-transparent"
         }`}
       >
         <ul className="flex flex-col gap-8 items-center font-sans uppercase text-lg">
-          <li 
-            className="text-black font-light cursor-pointer hover:text-primary transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            HOME
+          <li>
+            <Link
+              to="/"
+              className="text-black font-light cursor-pointer hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              HOME
+            </Link>
           </li>
-          <li 
-            className="text-black font-light cursor-pointer hover:text-primary transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            ABOUT ME
+          <li>
+            <Link
+              to="/about"
+              className="text-black font-light cursor-pointer hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              ABOUT ME
+            </Link>
           </li>
-          <li 
-            className="text-black font-light cursor-pointer hover:text-primary transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            WORK DONE
+          <li>
+            <Link
+              to="/portfolio"
+              className="text-black font-light cursor-pointer hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              WORK DONE
+            </Link>
           </li>
         </ul>
-        <button className="cursor-pointer text-primary font-light text-lg border border-primary rounded-3xl px-8 py-3 hover:bg-primary hover:text-white transition-all ease-in-out duration-300 hover:shadow">
-          PLACE ORDER
-        </button>
+        <Link to="/order" onClick={() => setIsMenuOpen(false)}>
+          <button className="cursor-pointer text-primary font-light text-lg border border-primary rounded-3xl px-8 py-3 hover:bg-primary hover:text-white transition-all ease-in-out duration-300 hover:shadow">
+            PLACE ORDER 
+          </button>
+        </Link>
       </div>
     </div>
   );

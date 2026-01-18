@@ -1,15 +1,29 @@
-import './App.css'
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import Order from "./pages/Order";
 
 function App() {
   return (
-    <>
-      <Header />
-      <p className="py-12 px-4 font-light">Aquí va el contenido</p>
-      <Footer />
-    </>
-  )
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/order" element={<Order />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
