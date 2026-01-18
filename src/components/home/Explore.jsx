@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ icon, title, desc, linkText, route }) => (
   <div className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-500 group">
-    <div className="w-12 h-12 bg-azul-claro/30 rounded-full flex items-center justify-center text-azul-acento mb-6 bg-primary/10 text-primary transition-colors">
+    <div className="w-12 h-12 rounded-full flex items-center justify-center text-azul-acento mb-6 bg-primary/10 text-primary">
       <span className="material-symbols-outlined">{icon}</span>
     </div>
     <h3 className="text-xl font-serif mb-4 text-texto-dark">{title}</h3>
