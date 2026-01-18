@@ -2,6 +2,7 @@
 
 @theme {
   --color-primary: #4a90e2;
+  --color-primary-light: #91c5ff;
   --color-secondary: #8fb8e6;
   --color-background-light: #fafafa;
   --color-background-dark: #101a22;
@@ -9,6 +10,14 @@
 
   --font-serif: "Playfair Display", serif;
   --font-sans: "Lato", sans-serif;
+}
+
+@utility bg-radial-elegant {
+  background-image: radial-gradient(
+    ellipse at top right,
+    #91c5ff 0%,
+    var(--color-background-light) 50%
+  );
 }
 
 body {
