@@ -7,13 +7,13 @@ export function Artist() {
   return (
     <HeroLayout
       label="About the artist"
-      image={vertical}
+      imageSrc={vertical}
       imageAlt="Artist portrait"
       horizontal={false}
       gradientBg={false}
       title={
         <>
-          Capturing Stories{" "}
+          Capturing Stories {" "}
           <span className="text-primary italic">in Every Stroke</span>
         </>
       }

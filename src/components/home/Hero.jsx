@@ -23,7 +23,7 @@ function Hero() {
       }
       actions={
         <>
-          <button className="cursor-pointer text-white bg-black font-light border border-black rounded-full px-8 py-3 transition-all ease-in-out duration-300 hover:bg-white hover:text-black hover:shadow-lg ">
+          <button className="cursor-pointer text-white bg-black font-light border border-black rounded-sm px-8 py-3 transition-all ease-in-out duration-300 hover:bg-white hover:text-black hover:shadow-lg ">
             <Link to="/order">Order a portrait</Link>
           </button>
           <Link to="/gallery" className="cursor-pointer font-light sm:py-3 py-0 px-8  transition-all ease-in-out duration-300 hover:underline underline-offset-8">View portfolio gallery</Link>
@@ -31,6 +31,7 @@ function Hero() {
       }
       imageSrc={horizontal}
       imageAlt="horizontal example"
+      gradientBg={true}
     />);
 }
 
