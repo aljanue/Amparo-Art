@@ -8,30 +8,30 @@ const Header = () => {
     <div className="relative">
       <div className="ps-6 pe-8 py-4 w-full flex justify-between items-center text-primary bg-accent gap-4 border-b border-gray-300 relative z-50">
         <h1 className="text-xl font-serif font-black italic tracking-wide text-black">
-          Amparo Art.
+          Duato Art.
         </h1>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8 items-center font-sans uppercase text-sm">
           <ul className="flex gap-8 text-black font-light">
             <li>
-              <Link to="/" className="cursor-pointer hover:underline">
+              <Link to="/" className="cursor-pointer hover:underline underline-offset-4">
                 HOME
               </Link>
             </li>
             <li>
-              <Link to="/about" className="cursor-pointer hover:underline">
+              <Link to="/about" className="cursor-pointer hover:underline underline-offset-4">
                 ABOUT ME
               </Link>
             </li>
             <li>
-              <Link to="/portfolio" className="cursor-pointer hover:underline">
-                WORK DONE
+              <Link to="/gallery" className="cursor-pointer hover:underline underline-offset-4">
+                GALLERY
               </Link>
             </li>
           </ul>
           <Link to="/order">
-            <button className="cursor-pointer text-primary font-light text-sm border border-primary rounded-3xl px-4 py-2 hover:bg-primary hover:text-white transition-all ease-in-out duration-300 hover:shadow">
+            <button className="cursor-pointer text-primary font-light text-sm border border-primary rounded-sm px-4 py-2 hover:bg-primary hover:text-white transition-all ease-in-out duration-300 hover:shadow-lg hover:shadow-primary/50">
               PLACE ORDER
             </button>
           </Link>
@@ -77,16 +77,16 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/portfolio"
+              to="/gallery"
               className="text-black font-light cursor-pointer hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              WORK DONE
+              GALLERY
             </Link>
           </li>
         </ul>
         <Link to="/order" onClick={() => setIsMenuOpen(false)}>
-          <button className="cursor-pointer text-primary font-light text-lg border border-primary rounded-3xl px-8 py-3 hover:bg-primary hover:text-white transition-all ease-in-out duration-300 hover:shadow">
+          <button className="cursor-pointer text-primary font-light text-lg border border-primary rounded-sm px-8 py-3 hover:bg-primary hover:text-white transition-all ease-in-out duration-300 hover:shadow-lg hover:shadow-primary/50">
             PLACE ORDER 
           </button>
         </Link>
