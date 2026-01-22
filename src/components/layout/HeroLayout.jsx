@@ -15,15 +15,15 @@ function HeroLayout({
 }) {
   return (
     <div
-      className={`p-10 flex md:flex-row flex-col-reverse flex-wrap justify-between md:gap-8 gap-16 items-center ${gradientBg ? "bg-radial-elegant" : "bg-white"}`}
+      className={`p-10 flex md:flex-row flex-col-reverse flex-wrap justify-between md:gap-8 gap-16 items-center ${gradientBg ? "bg-radial-elegant" : ""}`}
     >
       <div
-        className={`flex flex-col ${centerOnMobile ? "items-center text-center" : ""} md:gap-4 gap-4 flex-1 lg:p-12 md:p-6 sm:p-4 p-0 ${centered ? "items-center text-center" : "md:items-start md:text-start "}`}
+        className={`flex flex-col ${centerOnMobile ? "items-center text-center" : ""} md:gap-4 gap-4 flex-1 lg:p-12 md:p-6 sm:p-4 p-0 ${centered ? "items-center text-center" : "md:items-start md:text-start"}`}
       >
         {label && (
           <span className="uppercase text-xs text-primary">{label}</span>
         )}
-        <h2 className="text-5xl font-serif tracking-wide text-black">
+        <h2 className="text-5xl font-serif tracking-wide text-black  max-w-125">
           {title}
         </h2>
         <div className="font-light pt-4">{description}</div>
