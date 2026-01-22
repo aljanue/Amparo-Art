@@ -4,7 +4,7 @@ import OrderSteps from './OrderSteps'
 
 function OrderBody() {
   return (
-    <div className="flex lg:gap-12 md:gap-8 gap-4 px-4 py-8 items-start lg:flex-row flex-col pe-8">
+    <div className="flex lg:gap-12 md:gap-8 gap-4 lg:px-4 px-0 py-8 items-start lg:flex-row flex-col pe-8">
         <div className="flex-1">
             <OrderSteps />
         </div>

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function StartOrder() {
   return (
-    <div className="px-12 py-6 w-full">
-      <div className="flex flex-col gap-6 px-24 items-center justify-center text-center py-12 bg-primary/10 rounded-md border border-solid border-primary/20">
+    <div className="md:px-12 px-6 py-6 w-full">
+      <div className="flex flex-col gap-6 md:px-24 sm:px-12 px-6 items-center justify-center text-center py-12 bg-primary/10 rounded-md border border-solid border-primary/20">
         <h1 className="font-serif text-3xl">
           Ready to commission a masterpiece?
         </h1>
